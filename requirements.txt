@@ -1,0 +1,6 @@
+torch==2.5.0
+torchaudio==2.5.0
+TTS==0.22.0
+transformers==4.49.0
+requests==2.32.4
+pydub==0.25.1

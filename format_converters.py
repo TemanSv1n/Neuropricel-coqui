@@ -1,10 +1,8 @@
-from pydub import AudioSegment
-import os
-from ffmpeg import ffmpeg
 import os
 from datetime import datetime
 
 from pydub import AudioSegment
+
 ffmpeg_string = r"binaries\ffmpeg"
 if os.name == "nt":
     ffmpeg_string = r"binaries\ffmpeg.exe"
