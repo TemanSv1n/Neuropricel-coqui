@@ -1,0 +1,18 @@
+# Ignore these folders completely
+/binaries/
+/cyber-pomoyka/
+/models/
+/output/
+/.idea/
+/.venv/
+/__pycache__/
+
+# Ignore contents of client/downloads but not the folder itself
+/client/downloads/*
+
+# Ignore specific files
+/config.json
+/models.json
+
+# Keep the client/downloads directory itself
+!/client/downloads/
