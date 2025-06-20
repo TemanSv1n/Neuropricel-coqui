@@ -15,6 +15,7 @@
 # Ignore specific files
 /config.json
 /models.json
+/client_test_goonner.spec
 
 # Keep the client/downloads directory itself
 !/client/downloads/
