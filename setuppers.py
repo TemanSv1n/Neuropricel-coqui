@@ -15,7 +15,7 @@ def ensure_config_files():
     DEFAULT_CONFIG = {
   "model_id": 0,
   "workers_count": 1,
-  "server_ip": "localhost",
+  "server_ip": "0.0.0.0",
   "server_port": 8080,
   "default_speaker": "pricelius_v2"
 }
