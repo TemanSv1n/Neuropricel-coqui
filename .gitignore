@@ -6,6 +6,8 @@
 /.idea/
 /.venv/
 /__pycache__/
+/dist/
+/build/
 
 # Ignore contents of client/downloads but not the folder itself
 /client/downloads/*

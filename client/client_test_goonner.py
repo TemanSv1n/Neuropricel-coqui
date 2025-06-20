@@ -4,7 +4,7 @@ import time
 import os
 
 # Server configuration
-SERVER_URL = "http://localhost:8080"
+SERVER_URL = "http://73.219.86.24:25565" #"http://localhost:8080"
 REQUEST_TIMEOUT = 60  # seconds
 
 DIRS = {
@@ -69,7 +69,7 @@ if __name__ == "__main__":
     #     print(f"{count} --- {i}")
     #     count+=1
 
-    response = requests.get("http://localhost:8080/speakers.json")
+    response = requests.get(f"{SERVER_URL}/speakers.json")
     speakers = response.json()
     print("Available speakers:", speakers)
 

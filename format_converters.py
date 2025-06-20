@@ -3,7 +3,7 @@ from datetime import datetime
 
 from pydub import AudioSegment
 
-ffmpeg_string = r"binaries\ffmpeg"
+ffmpeg_string = r"binaries/ffmpeg"
 if os.name == "nt":
     ffmpeg_string = r"binaries\ffmpeg.exe"
 AudioSegment.converter = ffmpeg_string
