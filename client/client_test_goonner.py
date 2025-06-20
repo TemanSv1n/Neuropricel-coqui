@@ -7,6 +7,10 @@ import os
 SERVER_URL = "http://localhost:8080"
 REQUEST_TIMEOUT = 60  # seconds
 
+DIRS = {
+        'downloads':"downloads"
+    }
+
 
 def send_tts_request(text, speaker="pricelius_v2", speed=1.0, emotion="Angry", gain: float = 0.0):
     """
@@ -55,6 +59,9 @@ def send_tts_request(text, speaker="pricelius_v2", speed=1.0, emotion="Angry", g
         return None
 
 if __name__ == "__main__":
+    for name, path in DIRS.items():
+        os.makedirs(path, exist_ok=True)
+        print(f"Ensured directory exists: {path}")
     # Example usage
     # print("Available speakers:\n")
     # count = 0
