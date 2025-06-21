@@ -1,10 +1,12 @@
 import os
 from datetime import datetime
+#import logging
+#logging.basicConfig(level=logging.DEBUG)
 
 from pydub import AudioSegment
 
-ffmpeg_string = r"binaries/ffmpeg"
-if os.name == "nt":
+ffmpeg_string = r"ffmpeg" #linux shared lib
+if os.name == "nt": #windows binary in folder
     ffmpeg_string = r"binaries\ffmpeg.exe"
 AudioSegment.converter = ffmpeg_string
 
@@ -51,18 +53,22 @@ def resample(path):
 
 def mono_to_stereo(input_path, output_path=None, delete_original=False):
     try:
+        #print("STARTED MONO TO STEREO CONVERSION")
         audio = AudioSegment.from_file(input_path)
 
         if audio.channels == 2:
+            #print("ALREADY STEREO")
             return input_path
 
         # Simple method - pydub handles the channel duplication
         stereo_audio = audio.set_channels(2)
+        #print("OPERATED")
 
         if output_path is None:
             output_path = input_path
 
         stereo_audio.export(output_path, format="mp3")
+        #print("EXPORTED")
 
         if delete_original and output_path != input_path:
             os.remove(input_path)
