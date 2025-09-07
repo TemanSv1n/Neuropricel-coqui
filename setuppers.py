@@ -17,7 +17,8 @@ def ensure_config_files():
   "workers_count": 1,
   "server_ip": "0.0.0.0",
   "server_port": 8080,
-  "default_speaker": "pricelius_v2"
+  "default_speaker": "pricelius_v2",
+  "device": "cuda"
 }
 
     DEFAULT_MODELS = [

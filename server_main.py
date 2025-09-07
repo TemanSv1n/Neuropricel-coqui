@@ -61,7 +61,9 @@ class AIWorker:
 
     def __init__(self, model_id):
         self.model_id = model_id
-        self.device = 'cpu'
+        with open('config.json', 'r') as file:
+            datas = json.load(file)
+        self.device = datas["device"]
         self.model = self.startTTS(model_id, self.device)
         logger.info(f"AI Worker initialized using device: {self.device}")
 
